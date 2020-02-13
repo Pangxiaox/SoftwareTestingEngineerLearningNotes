@@ -150,8 +150,26 @@ HTTP请求参数化，右键点击”线程组“ ->”添加“ ->"配置元件
 - Throughput：吞吐量——默认是每秒完成的请求数（Request Per Second），当使用了Transaction Controller时，也可以表示类似LoadRunner得Transaction per Second数
 - KB/sec：每秒从服务器端接收到的数据量，相当于LoadRunner中的Throughput/Sec
 
-性能测试一般关注：#Samples请求数、Average平均响应时间、Min最小响应时间、Max最大响应时间、Error%错误率、Throughput吞吐量
+性能测试一般关注：#Samples请求数、Average平均响应时间、Min最小响应时间、Max最大响应时间、Error%错误率、Throughput吞吐量  
+
+此外，也可以通过查看图形结果来分析测试报告  
+
+### 一个例子  
+
+Number of Threads（users）：10  
+
+Ramp-Up period（seconds）：10  
+
+Loop Count：2  
+
+Duration（seconds）：100  
+
+Web Server：Server Name of IP：www.baidu.com Protocol：https  
+
+### 用表格查看结果  
+
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/JMeter-pic/JMeterNew.PNG)
 
 
 
-**# 查看 图形结果 分析性能测试报告**
+
