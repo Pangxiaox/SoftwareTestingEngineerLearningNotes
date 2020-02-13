@@ -6,13 +6,13 @@
 
 #### 1. 添加线程组
 
-右键点击“测试计划” -> "添加“ -> ”Threads(Users) -> "线程组“
+右键点击“测试计划” -> "添加“ -> ”Threads(Users) -> "线程组“  
 
-**放图JMeter1**
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/JMeter-pic/JMeter1.PNG)  
 
-可以设置线程组名称，线程数，准备时长（Ramp-Up Period(in seconds))循环次数，调度器等参数
+可以设置线程组名称，线程数，准备时长（Ramp-Up Period(in seconds))循环次数，调度器等参数  
 
-**放图JMeter2**
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/JMeter-pic/JMeter2.PNG)  
 
 🔺线程组参数：
 
@@ -36,13 +36,13 @@
 
 ### 2. 添加HTTP请求
 
-右键点击”线程组“ ->”添加“ -> "Sampler" -> ”HTTP请求"
+右键点击”线程组“ ->”添加“ -> "Sampler" -> ”HTTP请求"  
 
-**放图JMeter3**
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/JMeter-pic/JMeter3.PNG)  
 
-我们采用如下接口：http://www.baidu.com/s?ie=utf-8&wd=jmeter性能测试
+我们采用如下接口：http://www.baidu.com/s?ie=utf-8&wd=jmeter性能测试  
 
-**放图JMeter4**
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/JMeter-pic/JMeter4.PNG)  
 
 🔺HTTP请求参数：
 
@@ -66,77 +66,76 @@
 
 ### 3. 添加察看结果树
 
-右键点击“线程组” ->“添加” ->“监听器” ->"察看结果树“
+右键点击“线程组” ->“添加” ->“监听器” ->"察看结果树“  
 
-**放图JMeter5**
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/JMeter-pic/JMeter5.PNG)  
 
-这时运行HTTP请求，修改响应数据格式为”HTML Source Formatted“：
-
-**放图JMeter6**
+这时运行HTTP请求，修改响应数据格式为”HTML Source Formatted“：  
+ 
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/JMeter-pic/JMeter6.PNG)  
 
 ### 4. 添加用户自定义变量
 
-HTTP请求参数化，右键点击”线程组“ ->”添加“ ->"配置元件" ->"用户定义的变量"
+HTTP请求参数化，右键点击”线程组“ ->”添加“ ->"配置元件" ->"用户定义的变量"  
 
-**放图JMeter7**
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/JMeter-pic/JMeter7.PNG)  
 
-新增一个参数wd，存放搜索词：
+新增一个参数wd，存放搜索词：  
 
-**放图JMeter8**
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/JMeter-pic/JMeter8.PNG)  
 
-在HTTP请求中使用该参数，格式为：${wd}：
+在HTTP请求中使用该参数，格式为：${wd}：  
 
-**放图JMeter9**
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/JMeter-pic/JMeter9.PNG)  
 
 ### 5. 添加断言
 
-右键点击”HTTP请求“ ->"添加” -> "断言“ ->”响应断言“
+右键点击”HTTP请求“ ->"添加” -> "断言“ ->”响应断言“  
 
-**放图JMeter10**
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/JMeter-pic/JMeter10.PNG)  
 
-校验返回的文本中是否包含搜索词，添加参数${wd}到要测试的模式中：
+校验返回的文本中是否包含搜索词，添加参数${wd}到要测试的模式中：  
 
-**放图JMeter11**
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/JMeter-pic/JMeter11.PNG)  
 
 ### 6. 添加断言结果
 
-右键点击”HTTP请求“ ->"添加” ->"监听器“ ->"断言结果"
+右键点击”HTTP请求“ ->"添加” ->"监听器“ ->"断言结果"  
 
-**放图JMeter12**
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/JMeter-pic/JMeter12.PNG)  
 
-运行，观察断言结果成功或失败：
+运行，观察断言结果成功或失败：  
 
-**放图Jmeter13**
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/JMeter-pic/JMeter13.PNG)  
 
 ### 7. 添加聚合报告
 
-右键点击”线程组“ ->”添加“ ->”监听器“ ->"聚合报告”，存放性能测试报告
+右键点击”线程组“ ->”添加“ ->”监听器“ ->"聚合报告”，存放性能测试报告  
 
-**放图JMeter14**
-
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/JMeter-pic/JMeter14.PNG)  
 
 
 ### 执行性能测试
 
 ### 1. 配置线程组
 
-配置性能测试相关参数：线程数、循环次数、持续时间等：配置并发用户数为10，持续时间60s：
+配置性能测试相关参数：线程数、循环次数、持续时间等：配置并发用户数为10，持续时间60s：  
 
-**Jmeter15**
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/JMeter-pic/JMeter15.PNG)  
 
 ### 2. 执行测试
 
-点击绿色箭头按钮启动测试，测试前点击小扫把按钮清除之前的调试结果
+点击绿色箭头按钮启动测试，测试前点击小扫把按钮清除之前的调试结果  
 
-**JMeter16**
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/JMeter-pic/JMeter16.PNG)  
 
 
 
 ### 分析测试报告
 
-性能测试执行完成后，打开聚合报告看到：
+性能测试执行完成后，打开聚合报告看到：  
 
-**JMeter17**
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/JMeter-pic/JMeter17.PNG)  
 
 🔺聚合报告参数：
 
