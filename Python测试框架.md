@@ -14,9 +14,9 @@ TextTestRunner：执行测试用例，run(test)会执行TestSuite/TestCase中的
 
 TestFixture：测试用例环境的搭建和销毁
 
-**unittest静态类图**
+**unittest静态类图**  
 
-**放图unittest**
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/Python_tests/unittest.png)  
 
 ⭐整体流程：首先写好TestCase，然后由TestLoader加载TestCase到TestSuite，然后由TextTestRunner来运行TestSuite，运行的结果保存在TextTestResult中，整个过程集成在unittest.main模块中
 
@@ -553,9 +553,10 @@ test_class.py ......                                                     [100%]
 
 对于上面这个python代码，在命令行中输入 `pytest --html=a.html`
 
-打开a.html后页面显示如图：
+打开a.html后页面显示如图：  
 
-**放图cmd**
+
+![Image text](https://github.com/Pangxiaox/SoftwareTestingEngineerLearningNotes/blob/master/Python_tests/cmd.PNG)  
 
 - 运行指定的case
 
